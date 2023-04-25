@@ -5,7 +5,7 @@ evolve_essence = function(core, layer, result)
   local l = layer
   local c = core
 
-  if minetest.settings:get("crops_essence_crafting_difficult") then
+  if minetest.settings:get_bool("crops_essence_crafting_difficult") then
     minetest.register_craft({
       output = result,
       recipe = {
