@@ -4,14 +4,26 @@ evolve_essence = function(core, layer, result)
 
   local l = layer
   local c = core
-  minetest.register_craft({
-    output = result,
-    recipe = {
-      {"", l, ""},
-      {l , c, l},
-      {"", l, ""},
-    },
-  })
+
+  if minetest.settings:get("crops_essence_crafting_difficult") then
+    minetest.register_craft({
+      output = result,
+      recipe = {
+        {l, l, l},
+        {l, c, l},
+        {l, l, l},
+      },
+    })
+  else
+    minetest.register_craft({
+      output = result,
+      recipe = {
+        {"", l, ""},
+        {l , c, l},
+        {"", l, ""},
+      },
+    })
+  end
 end
 
 evolve_essence("default:stone", "resource_crops:earth_essence", "resource_crops:coal_essence")

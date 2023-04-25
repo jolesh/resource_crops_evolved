@@ -1,0 +1,4 @@
+# Settings Applicable by GUI
+
+# Difficulty Resource Crops Evolved Recipes
+crops_essence_crafting_difficult (Makes the Resource Crops Evolved Recipes more difficult) bool false
